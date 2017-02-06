@@ -1,0 +1,18 @@
+//是指定编译的格式、我们可以使用 “proto2” “proto3” 具体区别我也没有深究 默认使用“proto2”
+syntax ="proto2";
+//指定生成的java文件所在包
+package protocoldemo;
+//指定生成的java文件所在的完整包名
+option java_package ="com.vector.protocoldemo";
+//生成的类名
+option java_outer_classname="DBPerson";
+//是消息定义的关键字，等同于C++中的struct/class，或是Java中的class。
+message Person{
+
+required string name=1;
+required int32 age=2;
+
+}
+
+
+
